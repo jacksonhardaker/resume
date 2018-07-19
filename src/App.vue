@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-  </div>
+  <md-app id="app">
+    <md-app-content>
+      <Header v-bind="resume.basics"/>
+      <img src="./assets/logo.png">
+      <HelloWorld/>
+    </md-app-content>
+  </md-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
+import Header from './components/Header'
+import resumeJson from './assets/json/resume.json'
 
 export default {
   name: 'App',
   components: {
+    Header,
     HelloWorld
+  },
+  data: function () {
+    return {
+      resume: {
+        basics: null
+      }
+    }
+  },
+  created: function () {
+    fetch(resumeJson)
+      .then(r => r.json())
+      .then(json => { this.resume = json })
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>
