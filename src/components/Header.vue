@@ -1,5 +1,5 @@
 <template>
-    <md-content md-tag="header">
+    <md-content class="page-header" md-tag="header">
         <md-avatar class="md-large">
             <img :src="basics.picture" :alt="basics.name">
         </md-avatar>
@@ -10,7 +10,6 @@
             <p><PhoneNumber v-bind:phone="basics.phone"/></p>
             <p><EmailAddress v-bind:email="basics.email" /></p>
         </address>
-        <md-icon src="../assets/svg/github-mark.svg"></md-icon>
     </md-content>
 </template>
 
@@ -42,5 +41,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 </style>
