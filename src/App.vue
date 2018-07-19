@@ -2,15 +2,12 @@
   <md-app id="app">
     <md-app-content>
       <Header/>
-      <img src="./assets/logo.png">
-      <HelloWorld/>
     </md-app-content>
   </md-app>
 </template>
 
 <script>
 
-import HelloWorld from './components/HelloWorld'
 import Header from './components/Header'
 
 export default {
@@ -19,8 +16,7 @@ export default {
     store: 'store'
   },
   components: {
-    Header,
-    HelloWorld
+    Header
   }
 }
 </script>
