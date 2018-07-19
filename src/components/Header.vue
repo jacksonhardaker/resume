@@ -1,7 +1,7 @@
 <template>
     <md-content md-tag="header">
         <md-avatar class="md-large">
-            <img src="../assets/jackson-hardaker-headshot-600x600.png" :alt="$attrs.name">
+            <img :src="basics.picture" :alt="basics.name">
         </md-avatar>
         <h1>{{ basics.name }}</h1>
         <h2>{{ basics.label }}</h2>
