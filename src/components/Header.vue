@@ -3,12 +3,12 @@
         <md-avatar class="md-large">
             <img src="../assets/jackson-hardaker-headshot-600x600.png" :alt="$attrs.name">
         </md-avatar>
-        <h1>{{ person.name }}</h1>
-        <h2>{{ person.label }}</h2>
+        <h1>{{ basics.name }}</h1>
+        <h2>{{ basics.label }}</h2>
         <address>
-            <p>{{ person.location.city }}, {{person.location.region}}</p>
-            <p><PhoneNumber v-bind:phone="person.phone"/></p>
-            <p><EmailAddress v-bind:email="person.email" /></p>
+            <p>{{ basics.location.city }}, {{basics.location.region}}</p>
+            <p><PhoneNumber v-bind:phone="basics.phone"/></p>
+            <p><EmailAddress v-bind:email="basics.email" /></p>
         </address>
         <md-icon src="../assets/svg/github-mark.svg"></md-icon>
     </md-content>
@@ -27,6 +27,17 @@ export default {
   components: {
     EmailAddress,
     PhoneNumber
+  },
+  data: () => {
+    return {
+      basics: {
+        location: {}
+      }
+    }
+  },
+  created: function () {
+    this.person.get()
+      .then(data => { this.basics = data })
   }
 }
 </script>
