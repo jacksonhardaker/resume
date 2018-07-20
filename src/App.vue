@@ -1,6 +1,7 @@
 <template>
   <md-content>
     <Header/>
+    <md-button class="md-raised md-primary" href="https://github.com/jacksonhardaker/resume" target="_blank">View Source</md-button>
     <!-- <div class="md-layout">
       <div class="md-layout-item">
         {{ basics.summary }}
