@@ -10,8 +10,7 @@ import routes from './routes'
 
 // Styles
 import 'vue-material/dist/vue-material.min.css'
-import './assets/scss/theme.scss'
-// import 'vue-material/dist/theme/black-green-light.css'
+import './assets/scss/index.scss'
 
 // Use Material Design components
 [VueMaterial.MdApp, VueMaterial.MdButton, VueMaterial.MdContent, VueMaterial.MdAvatar, VueMaterial.MdIcon, VueMaterial.MdToolbar, VueMaterial.MdDrawer, VueMaterial.MdList].forEach(component => Vue.use(component))

@@ -13,7 +13,7 @@ export default {
         return r.body
       })
   },
-  geEducation: () => {
+  getEducation: () => {
     return Vue.http.get('education/')
       .then(r => {
         return r.body

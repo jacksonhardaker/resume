@@ -32,7 +32,7 @@ const routes = [
     response: [
       {
         name: 'Musae',
-        position: 'SeniorFront End Engineer',
+        position: 'Senior Front End Engineer',
         website: 'https://www.musae.me/',
         startDate: '2016-02-20',
         endDate: 'Present',

@@ -1,22 +1,46 @@
 <template>
-  <md-content><Header/></md-content>
+  <md-content>
+    <Header/>
+    <!-- <div class="md-layout">
+      <div class="md-layout-item">
+        {{ basics.summary }}
+      </div>
+    </div> -->
+    <Skills/>
+    <Tools/>
+    <Projects/>
+    <Education/>
+  </md-content>
 </template>
 
 <script>
 
 import Header from './components/Header'
+import Skills from './components/Skills'
+import Tools from './components/Tools'
+import Projects from './components/Projects'
+import Education from './components/Education'
 
 export default {
   name: 'App',
   store: {
-    store: 'store'
+    person: 'person'
   },
   components: {
-    Header
+    Header,
+    Skills,
+    Tools,
+    Projects,
+    Education
   },
   data: () => ({
-    menuVisible: false
-  })
+    menuVisible: false,
+    basics: {}
+  }),
+  created: function () {
+    this.person.get()
+      .then(data => { this.basics = data })
+  }
 }
 </script>
 

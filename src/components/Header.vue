@@ -1,10 +1,10 @@
 <template>
-    <md-content class="page-header" md-tag="header">
-        <md-avatar class="md-large">
+    <md-content class="page-header md-accent" md-tag="header">
+        <md-avatar class="page-header-avatar">
             <img :src="basics.picture" :alt="basics.name">
         </md-avatar>
-        <h1>{{ basics.name }}</h1>
-        <h2>{{ basics.label }}</h2>
+        <h1 class="md-display-3">{{ basics.name }}</h1>
+        <h2 class="md-headline">{{ basics.label }}</h2>
         <address>
             <p>{{ basics.location.city }}, {{basics.location.region}}</p>
             <p><PhoneNumber v-bind:phone="basics.phone"/></p>
@@ -48,5 +48,10 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  .page-header-avatar {
+    min-width: 128px;
+    min-height: 128px;
   }
 </style>
