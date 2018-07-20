@@ -1,6 +1,6 @@
 <template>
   <md-content class="section md-layout" md-tag="section">
-    <h3 class="section-heading md-display-1 md-layout-item md-size-20 md-xsmall-size-80">skills</h3>
+    <h3 class="section-heading md-display-1 md-layout-item md-size-20 md-xsmall-size-100">skills</h3>
     <div class="section-body md-layout-item">
       <HorizontalList v-bind:list="skills" />
     </div>

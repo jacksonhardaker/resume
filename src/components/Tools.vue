@@ -1,6 +1,6 @@
 <template>
   <md-content class="section md-layout" md-tag="section">
-    <h3 class="section-heading md-display-1 md-layout-item md-size-20 md-xsmall-size-80">tools</h3>
+    <h3 class="section-heading md-display-1 md-layout-item md-size-20 md-xsmall-size-100">tools</h3>
     <div class="md-layout-item section-body">
       <ul class="tools-list">
         <li class="tools-list-item" :key="tool.name" v-for="tool in tools">
@@ -36,6 +36,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../assets/scss/mixins';
+
   .tools-list {
     padding:0;
     margin: 0;
@@ -48,6 +50,13 @@ export default {
       content: '-';
       margin: 0 1ch;
     }
+
+    @include breakpoint(mobile) {
+      &::after {
+        content: '';
+        display: none;
+      }
+    }
   }
   .tools-list-item {
     display: flex;
@@ -56,6 +65,14 @@ export default {
 
     &:first-child {
       margin-top: 0;
+    }
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+
+      &:first-child {
+        margin-top: 1.15rem;
+      }
     }
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <md-content class="section md-layout" md-tag="section">
-    <h3 class="section-heading md-display-1 md-layout-item md-size-20 md-xsmall-size-80">projects</h3>
+    <h3 class="section-heading md-display-1 md-layout-item md-size-20 md-xsmall-size-100">projects</h3>
     <div class="md-layout-item section-body">
       <ul class="md-layout-item project-list">
         <li class="project-list-item" :key="project.name" v-for="project in projects">
