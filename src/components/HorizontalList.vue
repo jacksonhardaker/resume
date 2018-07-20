@@ -19,6 +19,7 @@ export default {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .horizontal-list-item {

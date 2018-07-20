@@ -1,6 +1,6 @@
 <template>
   <md-content class="section md-layout" md-tag="section">
-    <h3 class="section-heading md-display-1 md-layout-item md-size-20">tools</h3>
+    <h3 class="section-heading md-display-1 md-layout-item md-size-20 md-xsmall-size-80">tools</h3>
     <div class="md-layout-item section-body">
       <ul class="tools-list">
         <li class="tools-list-item" :key="tool.name" v-for="tool in tools">

@@ -1,9 +1,9 @@
 <template>
   <md-content class="section md-layout" md-tag="section">
-    <h3 class="section-heading md-display-1 md-layout-item md-size-20">projects</h3>
+    <h3 class="section-heading md-display-1 md-layout-item md-size-20 md-xsmall-size-80">projects</h3>
     <div class="md-layout-item section-body">
-      <ul class="md-layout-item project-section-list">
-        <li :key="project.name" v-for="project in projects">
+      <ul class="md-layout-item project-list">
+        <li class="project-list-item" :key="project.name" v-for="project in projects">
           <div class="project-headline">
             <h4 class="md-headline project-name">{{ project.name }}</h4>
             <h5 class="md-subheading project-role" v-if="project.position">{{ project.position }}</h5>
@@ -38,10 +38,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .project-section-list {
+  .project-list {
     padding:0;
     margin: 0;
     list-style-type: none;
+  }
+  .project-list-item {
+    margin: 0 0 1.65rem 0;
   }
   .project-headline {
     display: flex;
@@ -53,6 +56,6 @@ export default {
     margin: 0 1ch 0 0;
   }
   .project-role {
-    margin: 0 0 0.1rem;
+    margin: 0 0 0.15rem;
   }
 </style>

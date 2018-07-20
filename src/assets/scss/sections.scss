@@ -4,6 +4,10 @@
   margin: 30px auto -30px;
   flex-direction: column;
 
+  @include breakpoint(mobile) {
+    padding: 0 30px 30px;
+  }
+
   @include breakpoint(phablet) {
     flex-direction: row;
   }
@@ -22,8 +26,10 @@
 
   @include breakpoint(mobile) {
     border-right: none;
+    border-bottom: 1px solid material-color($bluegrey, 700);
     margin: 0 auto;
     padding: 0;
+    justify-content: center;
   }
 }
 .section-body {
