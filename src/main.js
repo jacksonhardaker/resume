@@ -66,9 +66,9 @@ new Vue({
     ],
     // link tags
     link: [
-      { rel: 'canonical', href: 'http://example.com/#!/contact/', id: 'canonical' },
-      { rel: 'author', href: 'author', undo: false }, // undo property - not to remove the element
-      { r: 'icon', h: 'path/to/icon-32.png', sz: '32x32', t: 'image/png' }
+      // { rel: 'canonical', href: 'http://example.com/#!/contact/', id: 'canonical' },
+      // { rel: 'author', href: 'author', undo: false }, // undo property - not to remove the element
+      // { r: 'icon', h: 'path/to/icon-32.png', sz: '32x32', t: 'image/png' }
     ],
     script: [
     ],
