@@ -5,7 +5,10 @@
       <ul class="md-layout-item project-list">
         <li class="project-list-item" :key="project.name" v-for="project in projects">
           <div class="project-headline">
-            <h4 class="md-headline project-name">{{ project.name }}</h4>
+            <h4 class="md-headline project-name">
+              <a :href="project.website" v-if="project.website">{{ project.name }}</a>
+              <span v-if="!project.website">{{ project.name }}</span>
+            </h4>
             <h5 class="md-subheading project-role" v-if="project.position">{{ project.position }}</h5>
           </div>
           <ul>

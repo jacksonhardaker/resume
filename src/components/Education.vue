@@ -5,7 +5,10 @@
       <ul class="education-list">
         <li class="education-list-item" :key="item.studyType" v-for="item in education">
           <div class="education-headline">
-            <h4 class="title education-name">{{ item.institution }}</h4>
+            <h4 class="title education-name">
+              <a :href="item.url" v-if="item.url">{{ item.institution }}</a>
+              <span v-if="!item.url">{{ item.institution }}</span>
+            </h4>
             <p class="education-type">{{ item.studyType }}</p>
           </div>
         </li>
